@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Banner from "../Banner/Banner";
 
 const Header = () => {
   return (
@@ -48,6 +49,7 @@ const Header = () => {
           </Nav>
         </Container>
       </Navbar>
+      <Banner></Banner>
     </div>
   );
 };
