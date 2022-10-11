@@ -1,7 +1,55 @@
 import React from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Navbar bg="primary" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="">
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Nav.Link
+                style={{
+                  fontSize: "20px",
+                  color: "white",
+                  textDecoration: "none",
+                }}
+                href="#home"
+              >
+                Home
+              </Nav.Link>
+            </Link>
+            <Link to="/statics" style={{ textDecoration: "none" }}>
+              <Nav.Link
+                style={{
+                  fontSize: "20px",
+                  color: "white",
+                  textDecoration: "none",
+                }}
+                href="#features"
+              >
+                Statics
+              </Nav.Link>
+            </Link>
+            <Link to="/blog" style={{ textDecoration: "none" }}>
+              <Nav.Link
+                style={{
+                  fontSize: "20px",
+                  color: "white",
+                  textDecoration: "none",
+                }}
+                href="#pricing"
+              >
+                Blog
+              </Nav.Link>
+            </Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    </div>
+  );
 };
 
 export default Header;
