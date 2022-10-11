@@ -29,7 +29,7 @@ const Header = () => {
                   color: "white",
                   textDecoration: "none",
                 }}
-                href="#features"
+                href="#statics"
               >
                 Statics
               </Nav.Link>
@@ -41,7 +41,7 @@ const Header = () => {
                   color: "white",
                   textDecoration: "none",
                 }}
-                href="#pricing"
+                href="#blogs"
               >
                 Blog
               </Nav.Link>

@@ -14,11 +14,13 @@ function App() {
       children: [
         {
           path: "/",
-          loader: () => fetch("topics.json"),
+          loader: async () => {
+            return fetch("topics.json");
+          },
           element: <Home></Home>,
         },
         {
-          path: "/statics",
+          path: "/:id",
           element: <Statics></Statics>,
         },
         {
@@ -26,7 +28,12 @@ function App() {
           element: <Blog></Blog>,
         },
         {
-          path: "/quize",
+          path: "/quize/:quizeId",
+          loader: async ({ params }) => {
+            return fetch(
+              `https://openapi.programming-hero.com/api/quiz/${params.quizeId}`
+            );
+          },
           element: <Quiz></Quiz>,
         },
       ],
