@@ -5,8 +5,9 @@ import { useLoaderData } from "react-router-dom";
 import SingleTopic from "../SingleTopic/SingleTopic";
 
 const Home = () => {
-  const topics = useLoaderData();
-  console.log(topics);
+  const allTopics = useLoaderData();
+  console.log(allTopics);
+  const topics = allTopics.data;
 
   return (
     <Row>

@@ -8,7 +8,9 @@ const Header = () => {
     <div>
       <Navbar bg="primary" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand className="fs-4 fw-bold" href="#home">
+            DevTest
+          </Navbar.Brand>
           <Nav className="">
             <Link to="/" style={{ textDecoration: "none" }}>
               <Nav.Link

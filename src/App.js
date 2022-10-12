@@ -15,14 +15,14 @@ function App() {
         {
           path: "/",
           loader: async () => {
-            return fetch("topics.json");
+            return fetch("https://openapi.programming-hero.com/api/quiz");
           },
           element: <Home></Home>,
         },
         {
           path: "/statics",
           loader: async () => {
-            return fetch("topics.json");
+            return fetch("https://openapi.programming-hero.com/api/quiz");
           },
           element: <Statics></Statics>,
         },
