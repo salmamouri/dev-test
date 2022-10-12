@@ -16,6 +16,12 @@ const Quiz = () => {
       <h1>Questions</h1>
 
       <Row>
+        <Col
+          className=" h-75 w-25 bg-primary rounded-5 text-light sticky-top overflow-hidden"
+          md={2}
+        >
+          <h2 className="m-3 p-2">Score: {score}</h2>
+        </Col>
         <Col>
           {queries.map((query) => (
             <Question
@@ -25,9 +31,6 @@ const Quiz = () => {
               setScore={setScore}
             ></Question>
           ))}
-        </Col>
-        <Col className="bg-primary rounded-5 text-light" md={2}>
-          <h2 className="mt-5">Score: {score}</h2>
         </Col>
       </Row>
     </div>
