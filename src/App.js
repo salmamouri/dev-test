@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Blog from "./components/Blog/Blog";
 import Home from "./components/Home/Home";
+import NotFound from "./components/NotFound/NotFound";
 import Quiz from "./components/Quiz/Quiz";
 import Statics from "./components/Statics/Statics";
 import Main from "./layouts/Main/Main";
@@ -38,6 +39,10 @@ function App() {
             );
           },
           element: <Quiz></Quiz>,
+        },
+        {
+          path: "*",
+          element: <NotFound></NotFound>,
         },
       ],
     },

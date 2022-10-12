@@ -10,9 +10,9 @@ const Home = () => {
   const topics = allTopics.data;
 
   return (
-    <div className="">
+    <div>
       <Banner></Banner>
-      <Row>
+      <Row className="container mx-auto mb-5">
         {topics?.map((topic) => (
           <SingleTopic topic={topic} key={topic.id}></SingleTopic>
         ))}

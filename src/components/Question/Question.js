@@ -8,7 +8,7 @@ const Question = ({ query, score, setScore }) => {
   };
   const handleRight = (e) => {
     const btnValue = e.target.innerText;
-    if (btnValue === correctAnswer) {
+    if (btnValue.replace(/\s/g, "") === correctAnswer.replace(/\s/g, "")) {
       setScore(score + 1);
       toast.success("This is Correct Answer");
     } else {
