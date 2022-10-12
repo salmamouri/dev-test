@@ -1,12 +1,20 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Question from "../Question/Question";
 
 const Quiz = () => {
   const quize = useLoaderData();
-  const { id } = quize;
+  console.log(quize);
+
+  const queries = quize.data.questions;
+  console.log(queries);
+
   return (
-    <div>
-      <h3>quize:{id}</h3>
+    <div className="">
+      <h1>Questions</h1>
+      {queries.map((query) => (
+        <Question key={query.id} query={query}></Question>
+      ))}
     </div>
   );
 };

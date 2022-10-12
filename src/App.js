@@ -20,7 +20,10 @@ function App() {
           element: <Home></Home>,
         },
         {
-          path: "/:id",
+          path: "/statics",
+          loader: async () => {
+            return fetch("topics.json");
+          },
           element: <Statics></Statics>,
         },
         {
