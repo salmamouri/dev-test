@@ -51,7 +51,6 @@ const Header = () => {
           </Nav>
         </Container>
       </Navbar>
-      <Banner></Banner>
     </div>
   );
 };

@@ -34,13 +34,13 @@ const Blog = () => {
         <Accordion.Item eventKey="2">
           <Accordion.Header>What is UseHref?</Accordion.Header>
           <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            When we want to persist a value in react app, generally we use
+            useState hook. But the problem with useState hook is, it renders the
+            DOM everytime when the value changes. And it is not good practice.
+            useRef allows us to persist the value and save them without
+            rerendering the whole component. And when it gets updated, it only
+            use the reference of the value and do not cause rerender unlike
+            useState().
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

@@ -1,7 +1,7 @@
-import React from "react";
 import { Row } from "react-bootstrap";
 
 import { useLoaderData } from "react-router-dom";
+import Banner from "../Banner/Banner";
 import SingleTopic from "../SingleTopic/SingleTopic";
 
 const Home = () => {
@@ -10,11 +10,14 @@ const Home = () => {
   const topics = allTopics.data;
 
   return (
-    <Row>
-      {topics?.map((topic) => (
-        <SingleTopic topic={topic} key={topic.id}></SingleTopic>
-      ))}
-    </Row>
+    <div className="">
+      <Banner></Banner>
+      <Row>
+        {topics?.map((topic) => (
+          <SingleTopic topic={topic} key={topic.id}></SingleTopic>
+        ))}
+      </Row>
+    </div>
   );
 };
 

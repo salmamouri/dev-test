@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Col, Row } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 import Question from "../Question/Question";
 
@@ -8,13 +9,27 @@ const Quiz = () => {
 
   const queries = quize.data.questions;
   console.log(queries);
+  const [score, setScore] = useState(0);
 
   return (
     <div className="">
       <h1>Questions</h1>
-      {queries.map((query) => (
-        <Question key={query.id} query={query}></Question>
-      ))}
+
+      <Row>
+        <Col>
+          {queries.map((query) => (
+            <Question
+              key={query.id}
+              query={query}
+              score={score}
+              setScore={setScore}
+            ></Question>
+          ))}
+        </Col>
+        <Col className="sticky" md={2}>
+          <h2>{score}</h2>
+        </Col>
+      </Row>
     </div>
   );
 };
