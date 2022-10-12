@@ -12,7 +12,7 @@ const Quiz = () => {
   const [score, setScore] = useState(0);
 
   return (
-    <div className="">
+    <div className="container">
       <h1>Questions</h1>
 
       <Row>
@@ -26,8 +26,8 @@ const Quiz = () => {
             ></Question>
           ))}
         </Col>
-        <Col className="sticky" md={2}>
-          <h2>{score}</h2>
+        <Col className="bg-primary rounded-5 text-light" md={2}>
+          <h2 className="mt-5">Score: {score}</h2>
         </Col>
       </Row>
     </div>

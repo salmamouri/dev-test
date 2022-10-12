@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ToastContainer />
+    <ToastContainer position="top-center" autoClose={1000} />
     <App />
   </React.StrictMode>
 );

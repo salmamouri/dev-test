@@ -1,17 +1,18 @@
-import React, { useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import { FaEye } from "react-icons/fa";
 import { toast } from "react-toastify";
 const Question = ({ query, score, setScore }) => {
-  const { id, correctAnswer, question, options } = query;
-
+  const { correctAnswer, question, options } = query;
+  const clickEye = () => {
+    toast(correctAnswer);
+  };
   const handleRight = (e) => {
     const btnValue = e.target.innerText;
     if (btnValue === correctAnswer) {
       setScore(score + 1);
-      toast("This is Correct Answer");
+      toast.success("This is Correct Answer");
     } else {
-      toast("This is Wrong Answer ");
+      toast.error("This is Wrong Answer ");
     }
   };
   return (
@@ -24,7 +25,7 @@ const Question = ({ query, score, setScore }) => {
         >
           <div className="d-flex align-items-center justify-content-center">
             <h3 className="m-4 text-center">{question}</h3>
-            <FaEye style={{ fontSize: "25px" }} />
+            <FaEye onClick={clickEye} style={{ fontSize: "25px" }} />
           </div>
           <div className="option-container fw-semibold fs-5">
             <Button
